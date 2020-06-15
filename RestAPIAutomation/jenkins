@@ -21,3 +21,5 @@ steps
 {
 bat "mvn clean install"
 }
+}
+}
