@@ -7,7 +7,7 @@ maven 'maven'
 }
 stages
 {
-stage('chekout')
+stage('checkout')
 {
 steps
 {
