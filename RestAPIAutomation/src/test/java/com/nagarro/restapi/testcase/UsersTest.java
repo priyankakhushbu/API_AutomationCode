@@ -22,7 +22,7 @@ public class UsersTest extends BaseTest {
 	private final Logger logger = LoggerFactory.getLogger(UsersTest.class);
 
 	// Skipping this method as user has already been created so this will fail.
-	@Test(description = "When a new user created successfully", priority = 1, enabled = false)
+	@Test(description = "When a new user created successfully", priority = 1, enabled = true)
 	public void addNewUserSuccessfulTest() {
 
 		logger.debug("---addNewUserSuccessfulTest method stats----");
