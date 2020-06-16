@@ -22,5 +22,17 @@ steps
 bat "mvn clean install"
 }
 }
+
+stage('sonar analysis')
+{
+steps
+{
+echo "Sonar"
+withSonarQubeEnv("local sonar")
+{
+bat "mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar"
+}
+}
+}
 }
 }
