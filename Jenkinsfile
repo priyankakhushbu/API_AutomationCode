@@ -39,6 +39,7 @@ stage('Docker Build Image')
 steps
 	{
 	script{
+	echo $BUILD_NUMBER	
 	docker.build registry + ":$BUILD_NUMBER"
 	}
 	}
