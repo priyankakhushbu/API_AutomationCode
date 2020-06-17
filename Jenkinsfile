@@ -34,26 +34,6 @@ withSonarQubeEnv("local sonar")
 	}
 }
 }
-stage('Uploading to artifactory')
-	{
-	steps
-	{
-		rtMavenDeployer(
-		id: 'deployer',
-		serverId: '123456789@artifactory',
-		releaseRepo: 'priyanka.kumariDevopsTraining',
-		snapshotRepo: 'priyanka.kumariDevopsTraining'
-	)
-	rtMavenRun(
-		pom: 'pom.xml',
-		goals: 'clean install',
-		deployerId: 'deployer',
-	)
-	rtPublishBuildInfo(
-		serverId: '123456789@artifactory',
-	)
-	}
-	}
 stage('Docker Build Image')
 {
 steps
