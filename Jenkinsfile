@@ -19,29 +19,17 @@ stage('build')
 {
 steps
 	{
-	bat "mvn clean install"
+	bat "mvn clean install -DskipTests"
 	}
 }
 
-stage('sonar analysis')
-{
-steps
-{
-echo "Sonar"
-withSonarQubeEnv("local sonar")
-	{
-	bat "mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar"
-	}
-}
-}
 stage('Docker Build Image')
 {
 steps
 	{
 	script{
-	echo $BUILD_NUMBER	
-	docker.build registry + ":$BUILD_NUMBER"
-	}
+		docker.build("test-image", "./")
+		}
 	}
 }
 
