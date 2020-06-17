@@ -54,7 +54,15 @@ stage('Uploading to artifactory')
 	)
 	}
 	}
-
+stage('Docker Build Image')
+{
+steps
+	{
+	script{
+	docker.build registry + ":$BUILD_NUMBER"
+	}
+	}
+}
 
 }
 }
