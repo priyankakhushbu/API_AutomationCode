@@ -32,6 +32,16 @@ steps
 		}
 	}
 }
+	
+stage('Docker deployment container run')
+{
+steps
+	{
+		script{
+			docker.image('test-image').withRun('-d "test-imageContainer" -p 9004:8080')
+		}
+	}
+}
 
 }
 }
