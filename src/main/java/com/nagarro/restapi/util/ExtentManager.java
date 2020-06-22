@@ -5,6 +5,7 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
+//Manages ExtenReport
 public class ExtentManager {
 
 	private static ExtentHtmlReporter htmlReporter;
