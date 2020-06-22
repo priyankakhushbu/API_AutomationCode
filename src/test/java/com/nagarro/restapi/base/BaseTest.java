@@ -34,7 +34,7 @@ public class BaseTest extends PropertiesUtils {
 	public static String userToken;
 	private final Logger logger = LoggerFactory.getLogger(BaseTest.class);
 
-
+	//Test
 	// Set up test infrastructure
 	@BeforeSuite
 	public void setupTest() throws IOException {
